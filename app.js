@@ -10,6 +10,11 @@ function agregarAmigo() {
         return;
     }
 
+    if (amigo.includes(nombreAmigo)) { //verificar e impedir el ingreso de nombres duplicados
+        alert("Este Amigo ya fue ingresado");
+        return;
+    }
+
     amigo.push(nombreAmigo); //agregar el nombre a la lista de amigos
     inputAmigo.value = ""; //limpiar el input
     inputAmigo.focus(); //colocar el cursor en el input
